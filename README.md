@@ -20,7 +20,7 @@ Sounds good, right? Try it! :-)
 TL;DR
 ----------
 
-Tool which will help you creating inline CSS &amp HTML templates much much quicker!
+Tool which will help you creating inline CSS &amp; HTML templates much much quicker!
 
 Installing
 ----------
