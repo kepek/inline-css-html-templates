@@ -72,10 +72,15 @@ $mod_rewrite = in_array('mod_rewrite', apache_get_modules());
 		if ($debug) {
 			$data = array_merge($data, array('debug' => $debug));
 		}
+		// Set Page URL
+		$base_url  = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
+		$base_url .= "://".$_SERVER['HTTP_HOST'];
+		$base_url .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
 		// Add Some Template Data
 		$data = array_merge($data, array(
 			'filename' => $filename,
-			'stylesheet' => '/templates/' . $stylesheet
+			'base_url' => $base_url . 'templates/',
+			'stylesheet_url' => $base_url . 'templates/' . $stylesheet,
 		));
 		// Set HTML
 		$html = $twig->render($template, $data);
