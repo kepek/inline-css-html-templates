@@ -17,7 +17,7 @@ Yes! It's not a mistake! CSS will be added as inline styles to each element you 
 
 Sounds good, right? Try it! :-)
 
-TL;DR;
+TL;DR
 ----------
 
 Tool which will help you creating inline CSS &amp HTML templates much much quicker!
