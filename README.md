@@ -36,7 +36,7 @@ And clone the repo to a new directory right then and there:
 
 #### Manually
 * Download the .zip file from the GitHub downloads modal
-* Unzip the files and rename the folder to "inline-css"
+* Unzip the files and rename the folder to "inline-css-html-templates"
 * Copy the folder to your Sites directory:
 	- `(~/Sites/)`
 
@@ -61,15 +61,15 @@ When you already have a Composer, do this:
 
 Visit your website (for example):
 
-	http://127.0.0.1/inline-css/
+	http://127.0.0.1/inline-css-html-templates/
 
 Check our Basic template:
 
-	http://127.0.0.1/inline-css/templates/basic.html
+	http://127.0.0.1/inline-css-html-templates/templates/basic.html
 
 Check our Basic template in Debug mode:
 
-	http://127.0.0.1/inline-css/templates/basic.html?debug=true
+	http://127.0.0.1/inline-css-html-templates/templates/basic.html?debug=true
 
 Template Structure
 ------------
