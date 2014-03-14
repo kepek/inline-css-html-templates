@@ -30,10 +30,6 @@ Navigate to your Terminal.app and go to Sites directory:
 
 	cd ~/Sites/
 
-Create inline-css directory.
-
-	mkdir inline-css && cd inline-css
-
 And clone the repo to a new directory right then and there:
 
 	git clone git@github.com/kepek/inline-css-html-templates.git
