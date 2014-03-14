@@ -1,0 +1,24 @@
+{% include 'partials/doctype.html' %}
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- If you delete this meta tag, the ground will open and swallow you. -->
+	<meta name="viewport" content="width=device-width" />
+	<title>{{ title|default('Email Title is not defined.') }}</title>
+	{% block head %}
+		{% include 'partials/head.html' %}
+	{% endblock %}
+	{% if debug %}<link rel="stylesheet" type="text/css" href="{{ stylesheet }}">{% endif %}
+</head>
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+	{% block header %}
+		{% include 'partials/header.html' %}
+	{% endblock %}
+
+	{% block content %}{% endblock %}
+
+	{% block footer %}
+		{% include 'partials/footer.html' %}
+	{% endblock %}
+</body>
+</html>

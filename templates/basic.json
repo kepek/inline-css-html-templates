@@ -1,0 +1,36 @@
+{
+
+	"title": "Basic Template",
+	"email": "michal@kechner.name",
+	"phone": "+48 111 111 111",
+	"posts": [
+		{
+			"title": "Title Ipsum",
+			"subtitle": "This is a note",
+			"excerpt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"image": "http://placehold.it/75x75",
+			"cta": "Read More"
+		},
+		{
+			"title": "Title Ipsum",
+			"subtitle": "This is a note",
+			"excerpt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"image": "http://placehold.it/75x75",
+			"cta": "Read More"
+		},
+		{
+			"title": "Title Ipsum",
+			"subtitle": "This is a note",
+			"excerpt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"image": "http://placehold.it/75x75",
+			"cta": "Read More"
+		},
+		{
+			"title": "Title Ipsum",
+			"subtitle": "This is a note",
+			"excerpt": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"image": "http://placehold.it/75x75",
+			"cta": "Read More"
+		}
+	]
+}

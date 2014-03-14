@@ -1,0 +1,8 @@
+{
+    "require": {
+        "twig/twig": "1.*",
+        "tijsverkoyen/css-to-inline-styles": "1.2.*@dev",
+        "zaininnari/html-minifier": "*",
+        "leafo/lessphp": "0.4.*@dev"
+    }
+}

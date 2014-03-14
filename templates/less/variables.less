@@ -1,0 +1,43 @@
+// Sizes
+@max-width: 600px;
+
+// Grays
+// -------------------------
+
+@gray-darker: #262829; // lighten(@black, 13.5%); // #222
+@gray-dark: #43484d; // lighten(@black, 20%); // #333
+@gray: #54585c; // lighten(@black, 33.5%); // #555
+@gray-light: #9ea6a7; // lighten(@black, 60%); // #999
+@gray-lighter: #e9eff0; // lighten(@black, 93.5%); // #eee
+
+// Brand colors
+// -------------------------
+
+@brand-primary: #27ae60;
+@brand-secondary: #117039;
+@brand-success: #5cb85c;
+@brand-warning: #f0ad4e;
+@brand-danger: #d9534f;
+@brand-info: #5bc0de;
+
+// Scaffolding
+// -------------------------
+
+@body-bg: #fff;
+@text-color: @gray-darker;
+
+// Links
+// -------------------------
+
+@link-color: @brand-primary;
+@link-hover-color: darken(@link-color, 15%);
+
+// Typography
+// -------------------------
+
+@font-size-base: 14px;
+@font-size-large: ceil(@font-size-base * 1.25); // ~18px
+@font-size-small: ceil(@font-size-base * 0.85); // ~12px
+
+@line-height-base: 1.428571429; // 20/14
+@line-height-computed: floor(@font-size-base * @line-height-base); // ~20px

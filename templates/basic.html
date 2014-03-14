@@ -1,0 +1,79 @@
+{% extends 'layouts/master.html' %}
+
+{% block content %}
+
+<!-- BODY -->
+<table class="body-wrap">
+	<tr>
+		<td></td>
+		<td class="container" align="" bgcolor="#FFFFFF">
+			<!-- content -->
+			<div class="content">
+				<table>
+					<tr>
+						<td>
+							<h1>
+								{{ title }}
+							</h1>
+							<p class="lead">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+							</p>
+							<p>
+								<img src="http://placehold.it/600x300" />
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- /.content -->
+
+			{% for post in posts %}
+
+				<div class="content">
+					<table>
+						<tr>
+							<td class="small" width="20%" style="vertical-align: top; padding-right:10px;">
+								<img src="{{ post.image }}" />
+							</td>
+							<td>
+								<h4>
+									{{ post.title }} <small>{{ post.subtitle }}</small>
+								</h4>
+								<p>
+									{{ post.excerpt }}
+								</p>
+								<a class="btn">{{ post.cta }}</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- /.content -->
+
+				{% if ((posts|length / 2)|round) == loop.index %}
+					<div class="content">
+						<table>
+							<tr>
+								<td>
+									<p class="callout">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. <a href="#">Do it Now!</a>
+									</p>
+									<!-- /.callout -->
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!-- /.content -->
+				{% endif %}
+
+			{% endfor %}
+
+		</td>
+		<td></td>
+	</tr>
+</table>
+<!-- /.body-wrap -->
+
+{% endblock %}
