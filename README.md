@@ -81,10 +81,10 @@ Template Structure
 Resources (Thanks!)
 ----------
 * [getcomposer.org](https://getcomposer.org/)
-* [twig.sensiolabs.org](http://twig.sensiolabs.org/)
 * [github.com/zaininnari/html-minifier](https://github.com/zaininnari/html-minifier)
 * [github.com/tijsverkoyen/CssToInlineStyles](https://github.com/tijsverkoyen/CssToInlineStyles)
 * [leafo.net/lessphp](https://leafo.net/lessphp/)
+* [twig.sensiolabs.org](http://twig.sensiolabs.org/)
 
 Contact
 ------------
