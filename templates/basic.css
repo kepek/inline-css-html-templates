@@ -13,7 +13,7 @@ img {
   max-width: 100%;
 }
 a {
-  color: #2BA6CB;
+  color: #27ae60;
 }
 h1,
 h2,
@@ -24,7 +24,7 @@ h6 {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: 1.1;
   margin-bottom: 15px;
-  color: #000;
+  color: #262829;
 }
 h1 small,
 h2 small,
@@ -33,7 +33,7 @@ h4 small,
 h5 small,
 h6 small {
   font-size: 60%;
-  color: #6f6f6f;
+  color: #9ea6a7;
   line-height: 0;
   text-transform: none;
 }
@@ -92,12 +92,12 @@ ul li {
 }
 .callout {
   padding: 15px;
-  background-color: #ECF8FF;
+  background-color: #d9edf7;
   margin-bottom: 15px;
 }
 .callout a {
   font-weight: bold;
-  color: #2BA6CB;
+  color: #3a87ad;
 }
 .collapse {
   margin: 0;
@@ -112,8 +112,8 @@ ul li {
 }
 .btn {
   text-decoration: none;
-  color: #FFF;
-  background-color: #666;
+  color: #fff;
+  background-color: #27ae60;
   padding: 10px 16px;
   font-weight: bold;
   margin-right: 10px;
@@ -135,6 +135,22 @@ ul li {
 }
 .head-wrap {
   width: 100%;
+  background: #27ae60;
+}
+.head-wrap,
+.head-wrap h1,
+.head-wrap .h1,
+.head-wrap h2,
+.head-wrap .h2,
+.head-wrap h3,
+.head-wrap .h3,
+.head-wrap h4,
+.head-wrap .h4,
+.head-wrap h5,
+.head-wrap .h5,
+.head-wrap h6,
+.head-wrap .h6 {
+  color: #fff;
 }
 .header.container table td.logo {
   padding: 15px;

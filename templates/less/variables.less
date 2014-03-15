@@ -1,6 +1,7 @@
 // Sizes
 @max-width: 600px;
 
+
 // Grays
 // -------------------------
 
@@ -10,7 +11,8 @@
 @gray-light: #9ea6a7; // lighten(@black, 60%); // #999
 @gray-lighter: #e9eff0; // lighten(@black, 93.5%); // #eee
 
-// Brand colors
+
+// Brand Colors
 // -------------------------
 
 @brand-primary: #27ae60;
@@ -20,17 +22,20 @@
 @brand-danger: #d9534f;
 @brand-info: #5bc0de;
 
+
 // Scaffolding
 // -------------------------
 
 @body-bg: #fff;
 @text-color: @gray-darker;
 
+
 // Links
 // -------------------------
 
 @link-color: @brand-primary;
 @link-hover-color: darken(@link-color, 15%);
+
 
 // Typography
 // -------------------------
@@ -41,3 +46,34 @@
 
 @line-height-base: 1.428571429; // 20/14
 @line-height-computed: floor(@font-size-base * @line-height-base); // ~20px
+
+
+// Borders
+// -------------------------
+@border-width: 2px;
+
+
+// Standard Colors
+// -------------------------
+@black: #000;
+@white: #fff;
+
+
+// Form States and Alerts
+// -------------------------
+
+@state-warning-text: #c09853;
+@state-warning-bg: #fcf8e3;
+@state-warning-border: darken(spin(@state-warning-bg, -10), 5%);
+
+@state-danger-text: #b94a48;
+@state-danger-bg: #f2dede;
+@state-danger-border: darken(spin(@state-danger-bg, -10), 5%);
+
+@state-success-text: #468847;
+@state-success-bg: #dff0d8;
+@state-success-border: darken(spin(@state-success-bg, -10), 5%);
+
+@state-info-text: #3a87ad;
+@state-info-bg: #d9edf7;
+@state-info-border: darken(spin(@state-info-bg, -10), 5%);
