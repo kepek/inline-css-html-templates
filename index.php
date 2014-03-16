@@ -6,7 +6,7 @@ use \zz\Html\HTMLMinify;
 // Set Templates
 $templates = glob('templates/*.html');
 // Has Mod_Rewrite?
-$mod_rewrite = in_array('mod_rewrite', apache_get_modules());
+$mod_rewrite = in_array('mod_rewrite', @apache_get_modules());
 ?>
 <?php if (!$_GET): ?>
 	<!doctype html>
@@ -67,15 +67,15 @@ $mod_rewrite = in_array('mod_rewrite', apache_get_modules());
 		// Set Stylesheet
 		$stylesheet = $filename . '.css';
 		// Set Data
-		$data = file_exists('templates/' . $json) ? json_decode(file_get_contents( dirname(__FILE__) . '/templates/' . $json  ), true) : array('data' => false);
+		$data = file_exists('templates/' . $json) ? json_decode(file_get_contents(dirname(__FILE__) . '/templates/' . $json ), true) : array('data' => false);
 		// Add Debug Data
 		if ($debug) {
 			$data = array_merge($data, array('debug' => $debug));
 		}
 		// Set Page URL
-		$base_url  = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
-		$base_url .= "://".$_SERVER['HTTP_HOST'];
-		$base_url .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
+		$base_url  = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 'https' : 'http');
+		$base_url .= '://' . $_SERVER['HTTP_HOST'];
+		$base_url .= str_replace(basename($_SERVER['SCRIPT_NAME']),'',$_SERVER['SCRIPT_NAME']);
 		// Add Some Template Data
 		$data = array_merge($data, array(
 			'filename' => $filename,
