@@ -1,40 +1,18 @@
 <?php
+// Clean Cache
+if (function_exists('opcache_reset')) {
+	opcache_reset();
+}
 // Ussing CSS to Inline Styles
 use \TijsVerkoyen\CssToInlineStyles\CssToInlineStyles;
 // Using HTMLMinify
 use \zz\Html\HTMLMinify;
 // Set Templates
-$templates = glob('templates/*.html');
+$templates = @glob('templates/*.html');
 // Has Mod_Rewrite?
-$mod_rewrite = in_array('mod_rewrite', @apache_get_modules());
+$mod_rewrite = function_exists('apache_get_modules') ? in_array('mod_rewrite', apache_get_modules()) : (getenv('HTTP_MOD_REWRITE') == 'On' ? true : false);
 ?>
-<?php if (!$_GET): ?>
-	<!doctype html>
-	<html lang="en">
-		<head>
-			<meta charset="utf-8">
-			<title>Inline CSS &amp; HTML Templates</title>
-		</head>
-		<body>
-			<h1>Inline CSS &amp; HTML Templates</h1>
-			<?php if (count($templates) > 0): ?>
-				<ol>
-					<?php foreach ($templates as $template): ?>
-						<li>
-							<a href="<?php echo ( $mod_rewrite ? 'templates/'. basename($template, '.html') . '.html' : '?' . http_build_query(array('template' => basename($template, '.html'))) ); ?>">
-								<?php echo basename($template); ?>
-							</a>
-						</li>
-					<?php endforeach; ?>
-				</ol>
-			<?php endif; ?>
-			<hr>
-			<p>
-				&copy; 2014 <a href="http://github.com/kepek">@kepek</a>
-			</p>
-		</body>
-	</html>
-<?php else: ?>
+<?php if (isset($_GET['template'])): ?>
 <?php
 	// Set Debug Mode
 	$debug = isset($_GET['debug']) && $_GET['debug'] !== 'false' ? true : false;
@@ -105,4 +83,34 @@ $mod_rewrite = in_array('mod_rewrite', @apache_get_modules());
 		}
 	}
 ?>
+<?php else: ?>
+	<!doctype html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<title>Inline CSS &amp; HTML Templates</title>
+		</head>
+		<body>
+			<h1>Inline CSS &amp; HTML Templates</h1>
+			<?php if (count($templates) > 0): ?>
+				<ol>
+					<?php foreach ($templates as $template): ?>
+						<li>
+							<a href="<?php echo ( $mod_rewrite ? 'templates/'. basename($template, '.html') . '.html' : '?' . http_build_query(array('template' => basename($template, '.html'))) ); ?>">
+								<?php echo basename($template); ?>
+							</a>
+							|
+							<a href="<?php echo ( $mod_rewrite ? 'templates/'. basename($template, '.html') . '.html?debug=true' : '?' . http_build_query(array('template' => basename($template, '.html'), 'debug' => true)) ); ?>">
+								(debug)
+							</a>
+						</li>
+					<?php endforeach; ?>
+				</ol>
+			<?php endif; ?>
+			<hr>
+			<p>
+				&copy; 2014 <a href="http://github.com/kepek">@kepek</a>
+			</p>
+		</body>
+	</html>
 <?php endif; ?>

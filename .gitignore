@@ -1,3 +1,5 @@
 vendor
 inline-css-html-templates.sublime-workspace
 inline-css-html-templates.sublime-project
+templates/resources
+*.psd
